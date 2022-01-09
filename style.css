@@ -20,7 +20,24 @@ body{
     background: rgb(13, 0, 65);
     overflow: hidden;
 }
-
+.elgocode{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.fa-regular{
+    color: red;
+}
 .game{
     width: 400px;
     height: 400px;

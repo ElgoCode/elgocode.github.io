@@ -6,6 +6,8 @@ let winner = document.getElementById("winner")
 let winner_window = document.querySelector(".winner-window")
 let resetGameBtn = document.querySelector(".btn")
 let state = 0;
+let elgocodeinsta = document.querySelector(".elgocode .instagram p")
+let elgocodemail = document.querySelector(".elgocode .mail p")
 let popupSound = new Audio("./audio/pop-3.mp3")
 let winSound = new Audio("./audio/win.wav")
 let drawSound = new Audio("./audio/draw.wav")
@@ -13,6 +15,20 @@ let restartSound = new Audio("./audio/restart.wav")
 let explosionSound = new Audio("./audio/explosion2.wav")
 let winStates = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
+if(!elgocodeinsta || !elgocodemail){
+    let h1 = document.createElement("h1")
+    document.body.innerHTML = ""
+    h1.style.color = "white"
+    h1.innerHTML = "You can't play the game if you change the html :)"
+    document.body.append(h1)
+}
+if(elgocodeinsta.innerText != "@elgocode" || elgocodemail.innerText != "elgocode1@gmail.com"){
+    let h1 = document.createElement("h1")
+    document.body.innerHTML = ""
+    h1.style.color = "white"
+    h1.innerHTML = "You can't play the game if you change the html :)"
+    document.body.append(h1)
+}
 
 function resetGame(){
     // restartSound.play()
