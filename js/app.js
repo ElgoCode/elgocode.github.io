@@ -19,13 +19,13 @@ function resetGame(){
     explosionSound.play()
     boxes.forEach(box=>{
         if(box.classList.contains("x")){
-            let particlList = makekParticles("x",60,box,"50%")
+            let particlList = makekParticles("x",30,box,"50%")
             particlList.forEach(particle=>{
                 particle.update()
             })
         }
         else if(box.classList.contains("o")){
-            let particlList = makekParticles("o",60,box,"50%")
+            let particlList = makekParticles("o",30,box,"50%")
             particlList.forEach(particle=>{
                 particle.update()
             })
