@@ -20,9 +20,9 @@ class Particle{
         this.areaDecrease = 1
         this.particle.style.width = this.area  + "px"
         this.particle.style.height = this.area  + "px"
-        this.speed = 15
+        this.speed = 9
         this.speedX = randInt(-this.speed,this.speed)
-        this.speedY = randInt(-this.speed,this.speed)
+        this.speedY = randInt(-this.speed,-1)
         this.posX = NodeToAppend.clientWidth / 2
         this.posY = NodeToAppend.clientHeight / 2
         this.particle.style.left = this.posX + 'px'

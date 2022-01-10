@@ -6,7 +6,7 @@ let winner = document.getElementById("winner")
 let winner_window = document.querySelector(".winner-window")
 let resetGameBtn = document.querySelector(".btn")
 let state = 0;
-let elgocodeinsta = document.querySelector(".elgocode .instagram p")
+let elgocodeinsta = document.querySelector(".elgocode .instagram a")
 let elgocodemail = document.querySelector(".elgocode .mail p")
 let popupSound = new Audio("./audio/pop-3.mp3")
 let winSound = new Audio("./audio/win.wav")
@@ -35,13 +35,13 @@ function resetGame(){
     explosionSound.play()
     boxes.forEach(box=>{
         if(box.classList.contains("x")){
-            let particlList = makekParticles("x",10,box,"50%")
+            let particlList = makekParticles("x",15,box,"50%")
             particlList.forEach(particle=>{
                 particle.update()
             })
         }
         else if(box.classList.contains("o")){
-            let particlList = makekParticles("o",10,box,"50%")
+            let particlList = makekParticles("o",15,box,"50%")
             particlList.forEach(particle=>{
                 particle.update()
             })
