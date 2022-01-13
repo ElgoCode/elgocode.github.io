@@ -51,31 +51,19 @@ class Particle{
         this.timer++
         
     }
-    // update(time){
-    //     if(this.opacity <= 0){
-    //         this.particle.remove()
-    //         this.canStop = true
-    //     }
-    //     if(this.canStop){
-    //         return
-    //     }
-    //     console.log(time)
-    //     this.move()
-    //     requestAnimationFrame(()=>{
-    //         this.update()
-    //     })
-    // }
-    update(){
-        let animationID = setInterval(()=>{
-            if(this.opacity <= 0){
-                this.particle.remove()
-                this.canStop = true
-            }
-            if(this.canStop){
-                clearInterval(animationID)
-            }
-            this.move()
-        },1000/30)
+    update(time){
+        if(this.opacity <= 0){
+            this.particle.remove()
+            this.canStop = true
+        }
+        if(this.canStop){
+            return
+        }
+        console.log(time)
+        this.move()
+        requestAnimationFrame(()=>{
+            this.update()
+        })
     }
 }
 
