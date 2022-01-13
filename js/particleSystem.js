@@ -51,7 +51,7 @@ class Particle{
         this.timer++
         
     }
-    update(time){
+    update(){
         if(this.opacity <= 0){
             this.particle.remove()
             this.canStop = true
@@ -59,7 +59,6 @@ class Particle{
         if(this.canStop){
             return
         }
-        console.log(time)
         this.move()
         requestAnimationFrame(()=>{
             this.update()
