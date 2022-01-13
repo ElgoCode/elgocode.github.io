@@ -33,6 +33,7 @@ class Particle{
         this.opacityDecrease = 0.1
         this.timer = 0
         this.canStop = false
+        this.deltaTime = null
     }
 
     move(){
@@ -50,18 +51,31 @@ class Particle{
         this.timer++
         
     }
+    // update(time){
+    //     if(this.opacity <= 0){
+    //         this.particle.remove()
+    //         this.canStop = true
+    //     }
+    //     if(this.canStop){
+    //         return
+    //     }
+    //     console.log(time)
+    //     this.move()
+    //     requestAnimationFrame(()=>{
+    //         this.update()
+    //     })
+    // }
     update(){
-        if(this.opacity <= 0){
-            this.particle.remove()
-            this.canStop = true
-        }
-        if(this.canStop){
-            return
-        }
-        this.move()
-        requestAnimationFrame(()=>{
-            this.update()
-        })
+        let animationID = setInterval(()=>{
+            if(this.opacity <= 0){
+                this.particle.remove()
+                this.canStop = true
+            }
+            if(this.canStop){
+                clearInterval(animationID)
+            }
+            this.move()
+        },1000/30)
     }
 }
 
@@ -89,8 +103,11 @@ function makekParticles(type,number0fParticles,NodeToAppend,borderRadius){
     return particleList
 }
 
-
-
+// function updateMe(time){
+//     console.log(time)
+//     requestAnimationFrame(updateMe)
+// }
+// updateMe()
 // email elgocode1@gmail.com
 // instagram elgocode 
 
