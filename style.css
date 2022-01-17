@@ -20,6 +20,14 @@ body{
     background: rgb(13, 0, 65);
     overflow: hidden;
 }
+
+
+#canvas1{
+    position: absolute;
+}
+
+
+
 .elgocode{
     color: white;
     display: flex;

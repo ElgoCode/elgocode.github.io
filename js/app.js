@@ -35,16 +35,16 @@ function resetGame(){
     explosionSound.play()
     boxes.forEach(box=>{
         if(box.classList.contains("x")){
-            let particlList = makekParticles("x",15,box,"50%")
-            particlList.forEach(particle=>{
-                particle.update()
-            })
+            const pos = box.getBoundingClientRect();
+            let width = box.offsetWidth;
+            let height = box.offsetHeight;
+            makeParticles(20,pos.left + width/2,pos.top+height/2,"rgba(146, 134, 255,?)")
         }
         else if(box.classList.contains("o")){
-            let particlList = makekParticles("o",15,box,"50%")
-            particlList.forEach(particle=>{
-                particle.update()
-            })
+            const pos = box.getBoundingClientRect();
+            let width = box.offsetWidth;
+            let height = box.offsetHeight;
+            makeParticles(20,pos.left + width/2,pos.top+height/2,"rgba(255, 243, 134,?)")
         }
         box.addEventListener("click",isPlaying)
         if(box.classList.contains("x")) box.classList.remove("x")
