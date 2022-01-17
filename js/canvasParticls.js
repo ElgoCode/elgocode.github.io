@@ -44,7 +44,7 @@ class Circle{
         this.pos = new Vector2(x, y)
         const speed = randInt(2,7)
         this.speed = new Vector2(randInt(-speed,speed), randInt(-speed,-1))
-        this.radius = randInt(1,10)
+        this.radius = randInt(1,7)
         this.canDelete = false
         this.frame = 0
         this.color = color
@@ -87,10 +87,6 @@ function DeleteElementFromList(theList, theElement){
         theList.splice(index, 1);
     }
 }
-
-addEventListener("click",(event)=>{
-    makeParticles(20,event.clientX,event.clientY,"rgba(255, 243, 134,?)")
-})
 
 
 const Update = ()=>{
